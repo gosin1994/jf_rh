@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jt.dao.CommissionRuleDao" >
+  <resultMap id="BaseResultMap" type="com.jt.entity.CommissionRule" >
+    <result column="level" property="level" jdbcType="INTEGER" />
+    <result column="amount" property="amount" jdbcType="INTEGER" />
+  </resultMap>
+  <select id="selectByLevel" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    *
+    from t_commission_rule
+    where level = #{level,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select 
+    *
+    from t_commission_rule
+  </select>
+  
+ 
+  <update id="updateByLevel" parameterType="com.jt.entity.CommissionRule" >
+    update t_commission_rule
+    set amount = #{amount,jdbcType=INTEGER}
+    where level = #{level,jdbcType=INTEGER}
+  </update>
+  
+   <insert id="insert" parameterType="com.jt.entity.CommissionRule" >
+    insert into t_commission_rule (level, amount)
+    values (#{level,jdbcType=INTEGER}, #{amount,jdbcType=INTEGER})
+  </insert>
+  
+</mapper>

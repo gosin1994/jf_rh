@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jt.dao.MemberDao" >
+  <resultMap id="BaseResultMap" type="com.jt.entity.Member" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="pid" property="pid" jdbcType="INTEGER" />
+    <result column="level" property="level" jdbcType="INTEGER" />
+    <result column="order_count" property="orderCount" jdbcType="INTEGER" />
+    <result column="bank_name" property="bankName" jdbcType="VARCHAR" />
+    <result column="bank_account_name" property="bankAccountName" jdbcType="VARCHAR" />
+    <result column="bank_account_no" property="bankAccountNo" jdbcType="VARCHAR" />
+    <result column="alipay_no" property="alipayNo" jdbcType="VARCHAR" />
+    <result column="qrcode_url" property="qrcodeUrl" jdbcType="VARCHAR" />
+    <result column="customer_id" property="customerId" jdbcType="INTEGER" />
+    <result column="root_member_id" property="rootMemberId" jdbcType="INTEGER" />
+    <result column="root_member_name" property="rootMemberName" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="totalAmount" property="totalAmount" jdbcType="INTEGER" />
+    <result column="pid_name" property="pidName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, phone, pid, level, order_count, bank_name, bank_account_name, bank_account_no, alipay_no, qrcode_url, 
+    customer_id, update_time, create_time,root_member_id,root_member_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,(select IFNULL(SUM(amount),0) from t_commission where member_id=t_member.id) totalAmount
+    ,(select name from t_member m1 where m1.id=t_member.pid) pidName
+    from t_member
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPhone" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    ,(select IFNULL(SUM(amount),0) from t_commission where member_id=t_member.id) totalAmount
+    from t_member
+    where phone = #{phone,jdbcType=VARCHAR}
+  </select>
+  <select id="selectChildren" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_member
+    where pid = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    ,(select IFNULL(SUM(amount),0) from t_commission where member_id=t_member.id) totalAmount
+    ,(select name from t_member m1 where m1.id=t_member.pid) pidName
+    from t_member
+    where 1=1
+    
+     <if test="query.name != null" >
+	and name like CONCAT('%',#{query.name,jdbcType=VARCHAR},'%' )
+     </if>
+     <if test="query.phone != null" >
+	and phone like CONCAT('%',#{query.phone,jdbcType=VARCHAR},'%' )
+     </if>
+     order by create_time desc
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_member
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.jt.entity.Member" >
+    insert into t_member (id, name, phone, 
+      pid, level, order_count, bank_name, 
+      bank_account_name, bank_account_no, alipay_no, qrcode_url, 
+      customer_id,root_member_id,root_member_name, update_time, create_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{pid,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, #{orderCount,jdbcType=INTEGER}, #{bankName,jdbcType=VARCHAR}, 
+      #{bankAccountName,jdbcType=VARCHAR}, #{bankAccountNo,jdbcType=VARCHAR}, #{alipayNo,jdbcType=VARCHAR}, #{qrcodeUrl,jdbcType=VARCHAR}, 
+      #{customerId,jdbcType=INTEGER}, #{rootMemberId,jdbcType=INTEGER}, #{rootMemberName,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  
+  <update id="updateByPrimaryKey" parameterType="com.jt.entity.Member" >
+    update t_member
+    set name = #{name,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      pid = #{pid,jdbcType=INTEGER},
+      level = #{level,jdbcType=INTEGER},
+      order_count = #{orderCount,jdbcType=INTEGER},
+      bank_name = #{bankName,jdbcType=VARCHAR},
+      bank_account_name = #{bankAccountName,jdbcType=VARCHAR},
+      bank_account_no = #{bankAccountNo,jdbcType=VARCHAR},
+      alipay_no = #{alipayNo,jdbcType=VARCHAR},
+      qrcode_url = #{qrcodeUrl,jdbcType=VARCHAR},
+      customer_id = #{customerId,jdbcType=INTEGER},
+      root_member_id = #{rootMemberId,jdbcType=INTEGER},
+      root_member_name = #{rootMemberName,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
