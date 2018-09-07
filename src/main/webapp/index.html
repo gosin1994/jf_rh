@@ -30,20 +30,49 @@
 
 <script type="text/javascript">
 		/*提交测评表单*/
+		var isPhoneValid = false;
+		
 		function submitForm() {
 			var name = $("#name").val();
 			var phone = $("#phone").val();
 			var age = $("#age").val();
 			var educationLevel = $("#educationLevel").val();
 			var insureYear = $("#insureYear").val();
-			
-			var isPhoneValid = false;
+			/*var memberId = 4;*/
+	
+	$.ajax({
+	            type: "post",
+			    /*url: "o/customer/apply?mid=325",*/
+			    url: "o/customer/apply?mid=4",
+			    data: {
+			        'name': name,
+			        'phone':phone,
+			        'age':age,
+			        'educationLevel':educationLevel,
+			        'insureYear':insureYear,
+			        /*'memberId':memberId*/
+			    },
+			    success: function (data) {
+			        if (data) {
+			            alert(" 恭喜您，提交成功！\n 我司专业人员将会为您定制好学历提升方案后与您取得联系。")
+			        }else{
+			        	alert("提交失败")
+			        }
+			    },
+			    /*error: function () {
+			        alert("提交失败")
+			    }*/
+	});
+	
+	
+	/*前端数据校验*/
 			if (name == '' || name == '请输入姓名'
 					|| !isUsername(name)) {
 				alert('请填写真实姓名！');
 				$("#name").focus();
 				return false;
 			}
+					
 			if ($("#phone").val() == '' || $("#phone").val() == '请输入手机'
 					|| !isPhone($("#phone").val())) {
 				alert('请填写真实手机号码！');
@@ -325,7 +354,7 @@
 			            </select>
 				       <!--======社保结束=======-->
 					  <div style="clear: both"></div>
-					  <!--<div class="title">婚育状况：</div>
+					  <div class="title">婚育状况：</div>
 			            <select  name="msg_other" class="selectClass" >
 						  <option  value="-1">--请选择--</option>
 						  <option value="1">未婚未育</option>
@@ -334,11 +363,11 @@
 						  <option value="4">已婚超生</option>
 						  <option value="5">其它</option>
 						</select>
-					  <div style="clear: both"></div>-->
+					  <div style="clear: both"></div>
 					 
 					  <div style="font-size: 14px; height: 30px; line-height:30px; color:#D11D43;">请认真填写，各选项将直接影响你最后的积分情况。</div>
 					  <div class="formBtDiv">
-					  	<input class="formbt" onclick="submitForm();beforeSubmit()" type="button" value="免费测评" />
+					  	<input class="formbt" onclick="submitForm()" type="button" value="免费测评" />
 					  </div>
 					</div>
 			    	</div>
@@ -1115,11 +1144,5 @@
 		<!--</div>-->
 	</body>
 	
-	<script type="text/javascript">
-	
-
-	function beforeSubmit() {
-
-</script>
 	
 </html>

@@ -102,4 +102,13 @@ public class Customer {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
+
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", name=" + name + ", phone=" + phone + ", age=" + age + ", insureYear="
+				+ insureYear + ", educationLevel=" + educationLevel + ", memberId=" + memberId + ", isMember="
+				+ isMember + ", updateTime=" + updateTime + ", createTime=" + createTime + "]";
+	}
+    
+    
 }

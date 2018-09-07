@@ -15,7 +15,7 @@ public interface CustomerService {
 
     int updateByPrimaryKey(Customer record);
 
-	void apply(Customer customer);
+	boolean apply(Customer customer);
 
 	boolean isPhoneExist(String phone);
 }

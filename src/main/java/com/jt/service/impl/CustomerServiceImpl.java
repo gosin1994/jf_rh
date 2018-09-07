@@ -33,7 +33,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 	
 	
-	public void apply(Customer customer) {
+	public boolean apply(Customer customer) {
 
 
 		customer.setCreateTime(new Date());
@@ -74,7 +74,12 @@ public class CustomerServiceImpl implements CustomerService {
 		apply.setCreateTime(customer.getCreateTime());
 		apply.setUpdateTime(apply.getCreateTime());
 		
-		applyDao.insert(apply);
+		int number = applyDao.insert(apply);
+		if (number > 0) {
+			return true;
+		} else {
+			return false;
+		}
 		
 		
 	}

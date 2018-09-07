@@ -24,61 +24,20 @@ public class CustomerOController {
 	@Autowired
 	private CustomerService customerService;
 	
-	/**
-	 * 首页
-	 * @param mid
-	 * @return
-	 */
-	/*@RequestMapping
-	public ModelAndView index(@RequestParam(value="mid",defaultValue="0") Integer mid){
-		ModelAndView mv = new ModelAndView();
-		mv.addObject("mid", mid);
-		mv.setViewName("o/index.html");
-		return mv;
-	}*/
 	
 	/**
-	 * 用户积分测评页面
-	 * @param mid
-	 * @return
-	 */
-	@RequestMapping("/index")
-	
-	public ModelAndView applyView(){
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("index");
-		return mv;
-	}
-	
-	
-	
-	/**
-	 * 提交测评后跳转的页面
+	 * 官网提交测评后跳转的页面
 	 * @param request
 	 * @param customer
 	 * @return
 	 */
 	@RequestMapping(value="/apply",method=RequestMethod.POST)
-	public ModelAndView apply(HttpServletRequest request, Customer customer){
-		ModelAndView mv = new ModelAndView();
-		
-		customerService.apply(customer);
-		mv.addObject("customer", customer);
-		mv.setViewName("o/choose2");
-		return mv;
-	}
-	
-	/**
-	 * 测评成功，点击页面"只想测评"转的页面
-	 * @param cid
-	 * @return
-	 */
-	@RequestMapping("/success")
-	public ModelAndView ok(Integer cid){
-		ModelAndView mv = new ModelAndView();
-		
-		mv.setViewName("o/c_success");
-		return mv;
+	public boolean apply(HttpServletRequest request, Customer customer,@RequestParam(value="mid",defaultValue="0") Integer mid){
+		System.out.println("进来了》》》》》》》》》》》");
+		customer.setMemberId(mid);
+		System.out.println("mid==============>"+mid);
+		System.out.println(">>>>>>>>>>>>>"+customerService.apply(customer));
+		return customerService.apply(customer);
 	}
 	
 	/**
