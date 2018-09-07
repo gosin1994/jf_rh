@@ -40,29 +40,6 @@
 			var insureYear = $("#insureYear").val();
 			/*var memberId = 4;*/
 	
-	$.ajax({
-	            type: "post",
-			    /*url: "o/customer/apply?mid=325",*/
-			    url: "o/customer/apply?mid=4",
-			    data: {
-			        'name': name,
-			        'phone':phone,
-			        'age':age,
-			        'educationLevel':educationLevel,
-			        'insureYear':insureYear,
-			        /*'memberId':memberId*/
-			    },
-			    success: function (data) {
-			        if (data) {
-			            alert(" 恭喜您，提交成功！\n 我司专业人员将会为您定制好学历提升方案后与您取得联系。")
-			        }else{
-			        	alert("提交失败")
-			        }
-			    },
-			    /*error: function () {
-			        alert("提交失败")
-			    }*/
-	});
 	
 	
 	/*前端数据校验*/
@@ -105,7 +82,34 @@
 				return false;
 			}
 	
+	
+			$.ajax({
+	            type: "post",
+			    /*url: "o/customer/apply?mid=325",*/
+			    url: "o/customer/apply?mid=325",
+			    data: {
+			        'name': name,
+			        'phone':phone,
+			        'age':age,
+			        'educationLevel':educationLevel,
+			        'insureYear':insureYear,
+			        /*'memberId':memberId*/
+			    },
+			    success: function (data) {
+			        if (data) {
+			            alert("恭喜您，提交成功！\n 您的测评结果将由专人回复您。")
+			        }else{
+			        	alert("提交失败了:(")
+			        }
+			    },
+			    error: function () {
+			        	alert("提交失败")
+			    }
+	});
+	
 			return true;
+			
+			
 		}
 	
 		function isUsername(temp) {
@@ -145,6 +149,8 @@
 			});
 		}
 		
+		
+	
 		
 	</script>		
 		
@@ -1135,9 +1141,9 @@
 			
 			
 			<!--==============百度商桥开始============-->
-			<!--<script type="text/javascript"> 
+			<script type="text/javascript"> 
 				var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1e20cecd187e63d5a4a492a982b7f4cb' type='text/javascript'%3E%3C/script%3E")) 
-			</script>-->
+			</script>
 			
 			<!--===============百度商桥结束========-->
 			

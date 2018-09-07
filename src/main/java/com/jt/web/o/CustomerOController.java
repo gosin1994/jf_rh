@@ -32,11 +32,9 @@ public class CustomerOController {
 	 * @return
 	 */
 	@RequestMapping(value="/apply",method=RequestMethod.POST)
+	@ResponseBody
 	public boolean apply(HttpServletRequest request, Customer customer,@RequestParam(value="mid",defaultValue="0") Integer mid){
-		System.out.println("进来了》》》》》》》》》》》");
 		customer.setMemberId(mid);
-		System.out.println("mid==============>"+mid);
-		System.out.println(">>>>>>>>>>>>>"+customerService.apply(customer));
 		return customerService.apply(customer);
 	}
 	

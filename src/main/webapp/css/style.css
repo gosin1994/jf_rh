@@ -308,6 +308,24 @@
 
 
 /*全民助学让人人都拥有本科*/
+div {
+    display: block;
+}
+ul{
+	    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
 .con_box01{
 	width:100%;
 	padding:20px 0;
@@ -524,8 +542,8 @@
 	height: 150px; 
 	width: 100%; 
 	margin: 0 auto;
-	border-top: 2px solid blue;
-	border-bottom:2px solid blue ;
+	border-top: 2px solid #E9EAEB;
+	border-bottom:2px solid #E9EAEB ;
 }
 /* 热门好专业才配的上名校 */
 .major_box{
