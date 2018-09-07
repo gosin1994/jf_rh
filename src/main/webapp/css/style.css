@@ -775,7 +775,9 @@ li {
 }
 .footer_link{
 	margin: 0 auto;
-	color: white;
+	color: #FFFFFF;
+}.footer_link a{
+	color: #FFFFFF;
 }
 .footer_cr{
 	margin: 0 auto;

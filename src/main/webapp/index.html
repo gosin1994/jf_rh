@@ -13,6 +13,11 @@
 		<!--第一步：告诉浏览器，当前页面支持响应式-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
+		<!--========keywords=========-->
+		<meta name="keywords"  content="深圳市捷通信息咨询有限公司,捷通,捷通教育,深圳人才引进服务中心,入深户,积分入户,成人学历,学历提升" />
+		<meta name="description" content="深圳市捷通信息咨询有限公司，8年入户经验，一成功协助上千人办理深圳户口。" />
+		<!--=========./keywords=======-->
+		
 		<!--第二步：引入CSS样式-->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		
@@ -84,28 +89,28 @@
 	
 	
 			$.ajax({
-	            type: "post",
-			    /*url: "o/customer/apply?mid=325",*/
-			    url: "o/customer/apply?mid=325",
-			    data: {
-			        'name': name,
-			        'phone':phone,
-			        'age':age,
-			        'educationLevel':educationLevel,
-			        'insureYear':insureYear,
-			        /*'memberId':memberId*/
-			    },
-			    success: function (data) {
-			        if (data) {
-			            alert("恭喜您，提交成功！\n 您的测评结果将由专人回复您。")
-			        }else{
-			        	alert("提交失败了:(")
-			        }
-			    },
-			    error: function () {
-			        	alert("提交失败")
-			    }
-	});
+		            type: "post",
+				    /*url: "o/customer/apply?mid=325",*/
+				    url: "o/customer/apply?mid=325",
+				    data: {
+				        'name': name,
+				        'phone':phone,
+				        'age':age,
+				        'educationLevel':educationLevel,
+				        'insureYear':insureYear,
+				        /*'memberId':memberId*/
+				    },
+				    success: function (data) {
+				        if (data) {
+				            alert("恭喜您，提交成功！\n 您的测评结果将由专人回复您。")
+				        }else{
+				        	alert("提交失败了:(")
+				        }
+				    },
+				    error: function () {
+				        	alert("提交失败")
+				    }
+			});
 	
 			return true;
 			
@@ -1132,7 +1137,7 @@
 			<div class="footer_cr">
 				总部地址：深圳市宝安区固戍地址站A出口新中泰商务大厦7a
 				<br />
-				Copyright © 2001 - 2018 深圳市捷通咨询有限公司版权所有 All right reserved.
+				Copyright © 2001 - 2018 深圳市捷通咨询有限公司版权所有 <a style="color: #555;" href="http://www.miitbeian.gov.cn">粤ICP备17111325号-2</a>.
 			</div>
 		</div>
 		</center>
