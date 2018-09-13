@@ -93,7 +93,7 @@
 
 /*测评标题*/
 .block-title{
-	color: red;
+	color: blue;
 	font-size: 40px;
 	text-align: center;
 }
@@ -109,15 +109,18 @@
 	width: 300px;
 	height: 35px;
 	border-radius:8px;
-	border: 0.5px solid #DBDBDB;
+	border: 1px solid red;
 	outline:none;
+	margin-left: 5px;
+	font-size: 15px;
 }
 .selectClass{
 	width: 300px;
 	height: 35px;
 	border-radius:8px;
-	border: 0.5px solid #DBDBDB;
+	border: 1px solid red;
 	outline:none;
+	font-size: 15px;
 }
 /*评论标题*/
 .title{
@@ -146,8 +149,10 @@
 	background-color: white;
 	-webkit-box-shadow: #666 0px 0px 10px;
     -moz-box-shadow: #666 0px 0px 10px;
-    box-shadow: #666 0px 0px 10px;
+    box-shadow: #666 0px 0px 30px;
 }
+
+
 /*左边测评表单*/
 .totalForm_left{
 	margin: 0 auto;
@@ -202,36 +207,36 @@
 	margin: 0 auto;
 	border: gainsboro;
 	border: 5px solid gainsboro;
-	
 }
 /*绿色通道左边*/
 .greenChan_left{
 	text-align: center;
-	width: 50%;
-	height: 400px;
+	width: 47%;
+	height: 380px;
 	float: left;
-	
+	margin-left: 5px;
+	margin-top: 5px;
+	background-color: #b07eaa;
 }
 /*绿色通道右边*/
 .greenChan_right{
 	text-align: center;
 	margin-top: 5px;
 	margin-right: 5px;
-	width: 45%;
+	width: 47%;
 	height: 380px;
 	float: right;
 	background-color: lightblue;
-	
 }
 /*绿色通道文字1*/
 #greenChan_font{
 	font-size: 18px;
-	color: green;
+	color: white;
 }
 /*绿色通道文字2*/
 #greenChan_font2{
 	font-size: 30px;
-	color: red;
+	color: lightgreen;
 }
 #yuyue{
 	font-size: 25px;
@@ -284,13 +289,19 @@
 /*学历部分开始*/
 
 /*banner开始*/
-.banner{width:100%;}
+.banner{
+	width:100%;
+	background-color: #F6EEE5;
+}
 .banner a{
     display: block;
     overflow: hidden;
 }
 .banner a img{
-    width:100%;
+    width:86%;
+    height: 75%;
+    margin-left: 90px;
+    align-items: center;
 }
 .banner a .bg{
     float: left;
@@ -329,7 +340,7 @@ li {
 .con_box01{
 	width:100%;
 	padding:20px 0;
-	background-color: #e9eaeb;
+	background-color: #F6EEE5;
 }
 /*标题和文字 END*/
 .center img {
