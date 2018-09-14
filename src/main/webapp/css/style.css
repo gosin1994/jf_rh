@@ -191,6 +191,10 @@
 	width:110px;
 	border-radius:8px;
 }
+.formbt:hover{
+	background: #b07eaa;
+	color:#000000;
+}
 /*form 表单div*/
 .formBtDiv{
 	margin:0 auto;
