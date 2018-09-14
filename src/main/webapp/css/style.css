@@ -273,6 +273,9 @@
 	width:130px;
 	border-radius:8px;
 }
+.yuyueBt:hover{
+	background-color: black;
+}
 /*bg不成功不收费*/
 .bgImgDiv2{
 	background-color: #EEEEEE;
