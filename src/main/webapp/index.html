@@ -1,38 +1,19 @@
-<!--
-	author：龚鑫
-	  date：2018-8-28 16:00
-	 email：gx1008666@163.com
--->
-
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>深圳积分入户公共平台</title>
-		<!--第一步：告诉浏览器，当前页面支持响应式-->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<!--========keywords=========-->
-		<meta name="keywords"  content="深圳市捷通信息咨询有限公司,捷通,捷通教育,深圳人才引进服务中心,入深户,积分入户,成人学历,学历提升" />
-		<meta name="description" content="深圳市捷通信息咨询有限公司，8年入户经验，一成功协助上千人办理深圳户口。" />
-		<!--=========./keywords=======-->
-		
-		<!--第二步：引入CSS样式-->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-		
-		<!--第三步：引入jQuery文件，注意：必须在bootstrap之前引入-->
-		<script src="js/jquery-1.11.3.min.js"></script>
-		
-		<!--第四不：引入bootstrap库文件-->
-		<script src="js/bootstrap.min.js"></script>
-		
-		<!--引入本地css-->
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		
-		<!--引入favicon-->
-		<link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+<head>
+<meta charset="utf-8">
+<title>深圳市入户咨询网，入户查询，深圳户口办理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/leyu_ctrl.css">
 
+<!--=======判断来源设备跳转页面start======-->
 <script>
     function isMobile() {
         if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)))
@@ -42,13 +23,428 @@
     }
     
   //地址自己修改成你的手机端地址
-    if (isMobile() !== false){
-    	  window.location.href = "rh_wap.html";
+    if (isMobile() == false){
+    	  window.location.href = "jf_rh.html";
     }
       
     </script>
+<!--=======判断来源设备跳转页面end======-->
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+
+<script type="text/javascript" src="http://www.vnioo.com/msg/js/messages.jsonp.js"></script>
+<!--轮播-->
+<link rel="stylesheet" href="css/jquery.hiSlider.css">
+<!--信息滚动-->
+<link rel="stylesheet" href="css/liMarquee.css">
+
+</head>
 
 
+<body>
+<div class="index">
+ <div class="top"></div>
+ <!--导航-->
+ <div class="header">
+  <div class="h-logo fl"><img src="images/logo.png" alt="logo"></div>
+   <div class="h-nav fr">
+    <ul>
+     <li class="active"><a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">入户条件</a></li>
+     <li class=""><a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">最新资讯</a></li>
+     <li class=""><a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">联系我们</a></li>
+    </ul>
+   </div>
+ </div>
+ <!--banner-->
+ <div class="banner">
+  <article class="jq22-container">
+    <div id="wrap">
+      <ul class="hiSlider hiSlider3">
+        <li class="hiSlider-item">
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">
+            <img src="images/banner1.jpg" alt=""></a>
+        </li>
+        <li class="hiSlider-item">
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">
+            <img src="images/banner2.jpg" alt=""></a>
+        </li>
+      </ul>
+    </div>
+  </article>
+ </div>
+<!--深圳积分入户自助测评系统-->
+ <div class="im-a w96" id="jfcp">
+  <p class="ia-p1">深圳入户条件在线测评系统</p>
+  <p class="ia-p2">Shenzhen integral home self assessment system</p>
+  <div class="ia-form">
+    <form id="messagePost01">
+        <input type="hidden" class="msg_text" name="msg_webID" value="29237" />
+        <input type="hidden" class="msg_text" name="msg_url" value="" />
+        <input type="hidden" class="msg_text" name="msg_remarks" value="" />
+      <p class="ia-p3">测评结果以短信方式发送，请保持手机畅通!</p>
+      <div class="ia-col">
+        <span>您的姓名：</span>
+        <input type="text" placeholder="请输入您的姓名" class="msg_text" id="name" name="name"  maxlength="5"></div>
+      <div class="ia-col">
+        <span>您的手机：</span>
+        <input type="text" placeholder="请输入手机号码" class="msg_text" id="phone" name="phone"   maxlength="11"></div>
+      <div class="ia-col">                                           
+        <span>您的年龄：</span>
+        <select class="ia-sel msg_other" name="age" id="age" title="年龄">
+        	<option  value="-1">-- 请选择 --</option>
+	    	<option  value="1">25以下</option>
+	    	<option  value="2">25-30</option>
+	    	<option  value="3">30-35</option>
+	    	<option value="5">35-40</option>
+	    	<option  value="4">40以上</option> 
+        </select>
+      </div>
+      <div class="ia-col">
+        <span>您的学历：</span>
+        <select class="ia-sel msg_other" name="educationLevel" id="educationLevel" title="学历">
+         	<option  value="-1">-- 请选择 --</option>
+        	<option  value="1">高中、中专及以下</option>
+        	<option  value="2">非全日制大专</option>
+        	<option  value="3">全日制大专</option>
+        	<option  value="4">非全日制本科</option>
+        	<option  value="5">全日制本科及以上</option>
+        	
+        </select>
+      </div>
+      <div class="ia-col">
+        <span>社保年限：</span>
+        <select class="ia-sel msg_other" name="insureYear" id="insureYear" title="社保">
+         	<option  value="-1">-- 请选择 --</option>
+        	<option  value="1">一年以下</option>
+        	<option  value="2">1-2年</option>
+        	<option  value="3">3-4年</option>
+        	<option  value="4">五年以上</option>
+        </select>
+      </div>
+      <div class="ia-col">
+        <span>婚姻状况：</span>
+        <select class="ia-sel msg_other" name="msg_other" id="msg_other" title="婚姻">
+          <option>-- 请选择 --</option>
+          <option>未婚</option>
+          <option>已婚</option>
+          <option>离异</option>
+          <option>离异再婚</option></select>
+      </div>
+      <!--<div class="ia-col">
+        <span>接收结果手机：</span>
+        <input type="text" placeholder="请输入手机号码" class="ia-inp1 msg_text" name="msg_userphone" id="msg_userphone"></div>
+      -->
+      <div class="ia-btn">
+        <button type="button" id="Enter" name="Enter" onclick="submitForm()">开始测评</button></div>
+    </form>
+  </div>
+ </div>
+ <!--成功落户-->
+ <div class="im-h">
+  <div class="w96">
+    <p class="ih-p1">2018年已有
+      <span>23768人</span>通过深圳入户网成功落户深圳</p>
+    <div class="m6-xy">
+      <table class="m6-tab1">
+        <tbody>
+          <tr>
+            <th class="xy-1">姓名</th>
+            <th class="xy-1">性别</th>
+            <th class="xy-2">身份证号</th>
+            <th class="xy-2">入户办理进度</th></tr>
+        </tbody>
+      </table>
+      <div class="dowebok">
+        <ul>
+          <li>
+            <span class="xy-1">欧小姐</span>
+            <span class="xy-1">女</span>
+            <span class="xy-2">420359********5512</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">李先生</span>
+            <span class="xy-1">男</span>
+            <span class="xy-2">458239********4984</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">欧小姐</span>
+            <span class="xy-1">女</span>
+            <span class="xy-2">420359********5512</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">杨先生</span>
+            <span class="xy-1">男</span>
+            <span class="xy-2">220183********5846</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">李小姐</span>
+            <span class="xy-1">女</span>
+            <span class="xy-2">215789********5887</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">赵小姐</span>
+            <span class="xy-1">女</span>
+            <span class="xy-2">420359********5512</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">王小姐</span>
+            <span class="xy-1">女</span>
+            <span class="xy-2">420359********5512</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">陈先生</span>
+            <span class="xy-1">男</span>
+            <span class="xy-2">458239********4984</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">伍小姐</span>
+            <span class="xy-1">女</span>
+            <span class="xy-2">420359********5512</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">黄先生</span>
+            <span class="xy-1">男</span>
+            <span class="xy-2">220183********5846</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">张小姐</span>
+            <span class="xy-1">女</span>
+            <span class="xy-2">215789********5887</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <span class="xy-1">赵小姐</span>
+            <span class="xy-1">女</span>
+            <span class="xy-2">420359********5512</span>
+            <span class="xy-2">成功拿到入户指标卡</span>
+            <div class="clear"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ </div>
+ <!--入户办理流程-->
+<div class="im-f w96">
+  <p class="if-p1">入户办理流程</p>
+  <p class="if-p2">全程托管协办，最快
+    <span>30天即可入户深圳</span></p>
+  <div class="if-text">
+    <p class="if-p3">条件自查
+      <br>分值测评</p>
+    <p class="if-p4">准备资料以及
+      <br>相关证件</p>
+    <p class="if-p5">网上申报</p>
+    <p class="if-p6">网上公示</p>
+    <p class="if-p7">提交资料
+      <br>人社局审查</p>
+    <p class="if-p8">发放调令</p>
+    <p class="if-p9">办理准签证</p>
+    <p class="if-p10">迁入户口</p></div>
+  <div class="if-btn">
+    <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">
+      <button type="button">点击免费咨询</button></a>
+  </div>
+</div>
+ <!--入户答疑-->
+<div class="im-e">
+  <div class="w96">
+    <div class="ie-tit">
+      <p class="ie-p1">2018年深圳入户常见问题</p>
+      <p class="ie-p2">“你关心的入户问题由老师来帮你全面讲解”</p></div>
+    <div class="ie-fg"></div>
+    <div class="ie-text">
+      <ul>
+        <li class="">
+          <p>社保断缴过可以申请入户吗？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+        <li class="ie-li">
+          <p>非全日制学历可以入户吗？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+        <li class="ie-li">
+          <p>入户深圳，小孩可以上公立学校吗？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+        <li class="">
+          <p>办理深圳入户的周期要多久？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+        <li class="">
+          <p>超生的情况可以不可以 申请？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+        <li class="ie-li">
+          <p>入户条件不够如何申请入户？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+        <li class="ie-li">
+          <p>深圳目前最新的入户政策是什么？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+        <li class="">
+          <p>深圳积分入户多久的社保能保障入户？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+        <li class="">
+          <p>深圳技能入户要考什么证书？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+        <li class="ie-li">
+          <p>深圳入户需要哪些材料？</p>
+          <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">点击咨询</a></li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <div class="ie-btn">
+      <a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank">
+        <button type="button">在线找老师解答</button></a>
+    </div>
+  </div>
+</div>
+<div class="im-h">
+  <div class="w96">
+    <p class="ih-p3" style="font-size: 0.4rem;">入户深圳免费咨询答疑</p>
+    <div class="ih-form">
+      <form id="messagePost">
+        <input type="hidden" class="msg_text" name="msg_webID" value="29237" />
+        <input type="hidden" class="msg_text" name="msg_url" value="" />
+        <input type="hidden" class="msg_text" name="msg_remarks" value="" />
+        <textarea placeholder="您的问题描述" name="educ4" id="educ4"></textarea>
+        <input type="text" placeholder="您的姓名"  class="msg_text" name="msg_username" id="msg_username" style="margin-bottom:10px;">
+        <input type="text" placeholder="接收信息手机"  class="msg_text" name="msg_userphone" id="msg_userphone">
+        <p class="ih-p4">系统将会自动发送问题解答到您的手机，请注意查收！</p>
+        <button type="button" id="Enter" name="Enter" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='">提 交</button>
+      </form>
+    </div>
+  </div>
+ </div>
+ <div class="foot" id="contact">
+  <div style="padding: 10px 0px; background:#DA251C;"><a style="size: 0.4rem;color: white;" href="tel:0755-32831222">联系电话：0755-32831222</a></div>
+  <p style="color: #555;">版权所有：<font class="ssmd_copyright" >CopyRight©2018  <a style="color: #555;" href="http://www.miitbeian.gov.cn">粤ICP备17111325号-2</a></font></p>
+  <p style="color: #555;">深圳总部：深圳市宝安区固戍地址站A出口新中泰商务大厦7a</p>
+  <div class="copy_nav"><a href="/about.html" target="_blank" style="color:#555; height:30px;">关于我们</a> ┊ <a href="/contact.html" target="_blank" style="color:#555; height:30px;">联系我们</a></div>
+  <div class="blank" style="height: 8%;background-color: #AAAAAA;"></div>
+ </div>
+			<!--底部-->
+<!-- <div class="f-fg"></div>
+ <div class="footer">
+    <ul>
+        <li class="f-li1"><a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank"><button type="button"></button></a></li>
+        <li class="f-li2"><a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank"><button type="button"></button></a></li>
+        <li class="f-li3"><a href="tel:4009919967"><button type="button"></button></a></li>
+    </ul>
+    <div class="clear"></div>
+</div>-->
+</div>
+<!--轮播-->
+<!--弹出框-->
+<div class="modal  zx01 fade" style="z-index:9999999999999; display:none;">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background:none !important; box-shadow:none !important; border:0px !important;">
+     <div class="modal-header" style="border:0px;">
+        <div style="position:absolute;"><a  href="javascript:viod(0)" onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank"target="_blank"><img src="images/hb.png" width="100%"  alt=""/></a></div>
+        <button class="close" data-dismiss="modal" style="margin-top:10px !important; position:relative; border:2px #000 solid; border-radius:100px;">&times;</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal  zx fade" style="z-index:9999999999999;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">&times;</button>
+        <img src="images/lg.png" style="width:100%" />
+      </div>
+      <div class="modal-body">
+        <div style=" text-align:center">
+          <p style="font-size:0.22rem;">系统会自动将评测结果发送到您的手机中
+            <br />
+            <span style="color:red">请注意查收!</span></p>
+        </div>
+        <form id="messagePost03">
+          <input type="hidden" class="msg_text" name="msg_webID" value="29237" />
+          <input type="hidden" class="msg_text" name="msg_url" value="" />
+          <input type="hidden" class="msg_text" name="msg_remarks" value="" />
+          <table class="table">
+            <tr>
+              <td class="form_td border-none td_bot">您的年龄</td>
+              <td class="border-none td_bot"><input placeholder="请输入您的年龄" name="msg_other" type="text" class="form-control msg_other" title="年龄"></td>
+            </tr>
+            <tr>
+              <td class="form_td border-none td_bot">您的学历</td>
+              <td class="border-none td_bot"><select placeholder="您的学历" class="form-control msg_other" id="msg_telr" name="msg_other" type="text" title="学历"  style="width: 100%">
+              <option value="全日制本科">全日制本科</option>
+              <option value="全日制专科">全日制专科</option>
+              <option value="全日制研究生及以上">全日制研究生及以上</option>
+              <option value="非全日制本科">非全日制本科</option>
+              <option value="非全日制专科">非全日制专科</option>
+              <option value="留学生入户">留学生入户</option>
+              <option value="高中-中专及以下">高中-中专及以下</option>
+              <option value="其它">其它</option></select></td>
+            </tr>
+            <tr>
+              <td class="form_td border-none td_bot">您的社保</td>
+              <td class="border-none td_bot"><select placeholder="社保年限" class="form-control msg_other" id="msg_telr" name="msg_other" type="text" title="社保"  style="width: 100%">
+              <option value="累积未满1年">累积未满1年</option>
+              <option value="累积满1年">累积满1年</option>
+              <option value="累积满2年">累积满2年</option>
+              <option value="累积满3年">累积满3年</option>
+              <option value="累积满4年">累积满4年</option>
+              <option value="累积满5年">累积满5年</option>
+              <option value="其他">其他</option></select></td>
+            </tr>
+            <tr>
+              <td class="form_td border-none td_bot">婚育情况</td>
+              <td class="border-none td_bot"><select placeholder="婚育" class="form-control msg_other" id="msg_telr" name="msg_other" type="text" title="婚育" style="width: 100%">
+              <option value="未婚未育">未婚未育</option>
+              <option value="已婚未育">已婚未育</option>
+              <option value="已婚已育">已婚已育</option>
+              <option value="已婚超生">已婚超生</option>
+              <option value="其它">其它</option></select></td>
+            </tr>
+            <tr>
+          <td class="form_td border-none td_bot">您的姓名</td>
+          <td class="border-none td_bot">
+            <input type="text" class="form-control msg_text" id="msg_username" name="msg_username" placeholder="请输入姓名" />
+          </td>
+        </tr>
+        <tr>
+          <td class="form_td border-none td_bot">电话号码</td>
+          <td class="border-none td_bot">
+            <input type="text" class="form-control msg_text" id="msg_userphone" name="msg_userphone" placeholder="请输入电话号码" />
+          </td>
+        </tr>
+      </table>
+          <div class="form-group">
+          <input class="btn-i" type="button" id="Enter" name="Enter" onclick="$.msgSubmit('messagePost03')" style="border-radius:4px;height:38px;color:#fff" value="立即提交在线申请"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<link href="css/tan.css" rel="stylesheet" />
+<link href="css/form.css" rel="stylesheet" />
+<script src="js/bootstrap.min.js"></script>
+<!--弹出框-->
+<!--time open-->
+<script src="js/jquery.hiSlider.js"></script>
+
+<!--前端数据校验-->
 <script type="text/javascript">
 	// 判断页面跳转
 /*	function PCorWaps(){
@@ -117,7 +513,7 @@
 			$.ajax({
 		            type: "post",
 				    /*url: "o/customer/apply?mid=325",*/
-				    url: "o/customer/apply?mid=325",
+				    url: "o/customer/apply?mid=326",
 				    data: {
 				        'name': name,
 				        'phone':phone,
@@ -185,1048 +581,72 @@
 		
 	</script>		
 		
-		
-		
-	</head>
-	<body >
-		<!--<div class="container-fluid" >-->
-			<!--网页顶部-->
-			<div class="row">
-				<div class="col-md-4">
-					<a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					<img  width="70%" height="70%" src="img/jtlogo.png"/>
-					</a>
-				</div>
-				<div class="col-md-4">
-					<!--<img src="img/header.jpg"/>-->
-				</div>
-				<div class="col-md-4   " style="padding-top: 20px; " >
-					<ul class="list-inline text-right">
-						<li><a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">登陆</a></li>
-						<li><a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">注册</a></li>
-						<li >咨询热线：<span style="color: red;font-size: 20px;">0755-32831222</span></li>
-					</ul>
-				</div>
-				<div style="clear:both"></div>
-			<div class="main" style="border-top:1px #CCCCCC solid; padding-top:10px;">
-			 <div class="minwidth kfwNav headerOverflowInherit" style="z-index:100;">
-			      <div class="floatLeft kfwNaSub headerOverflowInherit">
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="text-align:center;text-indent:0; font-size:18px; font-weight:bold;">深圳积分入户网</a>
-			        <div class="kfwNaSubSub kfwNaSubSubIsHome" style="display:none;">
-			          <div class="floatLeft headerOverflowInherit kfwISubNav">
-			             <ul class="iNav overflowhidden headerOverflowInherit">
-			               <li class="iNavFirst">
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe63f;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户政策</a></h4>
-			                </li>
-			               <li >
-			                <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe64f;</i></a></span>
-			                <i></i>
-			                <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户条件</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe60e;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户测评</a></h4>
-			                </li>
-			               <li >
-			                <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe611;</i></a></span>
-			                <i></i>
-			                <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户分值表</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe633;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户流程</a></h4>
-			                    
-			                </li>
-			               <li >
-			                <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe60b;</i></a></span>
-			                <i></i>
-			                <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">居住证查询</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe62f;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">学信网学历查询</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe601;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">入户工种查询</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe621;</i></a></span>
-			                    <i></i>
-			                 <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">征信查询</a></h4>
-			               </li>		
-			             </ul>
-			          </div>
-			        </div>
-			      </div>
-			      <div class="floatLeft kfwNavs">
-			        <!--<a href="/">首页</a>-->
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分制入户
-			        <img class="hotNew" alt="" src="img/hot.gif">
-			        </a>
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">应届生入户
-			        <img class="hotNew" alt="" src="img/hot.gif">
-			        </a>
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">留学生入户</a>
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">核准制入户</a>
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">人才引进入户</a>
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">快速绿色通道</a>
-					<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">家属随迁入户</a>
-					<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">补贴申请事宜</a>
-			        <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" target="_blank">关于我们</a>
-			        </div>
-			    </div>
-			</div>
-			<div style="clear:both"></div>
-			</div>
-			
-			
-			
-			<!--网页导航栏-->
-			<!--=========轮播图开始===========-->
-			<div class="viewpager">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					  <!-- Indicators -->
-					  <ol class="carousel-indicators">
-					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					    <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-					    <li data-target="#carousel-example-generic" data-slide-to="4"></li>-->
-					  </ol>
-					
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner" role="listbox">
-					    <div class="item active">
-					    <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					      <img src="img/viewpager/3.jpg" alt="轮播图1">
-					    </a>  
-					      <div class="carousel-caption">
-					        ...
-					      </div>
-					    </div>
-					    <div class="item">
-					      <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					      <img  src="img/viewpager/4.jpg" alt="轮播图2">
-					      </a>
-					      <div class="carousel-caption">
-					        ...
-					      </div>
-					    </div>
-					    <!--<div class="item">
-					     <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					      <img src="img/viewpager/1.jpg" alt="轮播图3">
-					     </a>
-					     <div class="carousel-caption">
-					        ...
-					      </div>
-					    </div>
-					    
-					    <div class="item">
-					     <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					      <img src="img/viewpager/4.jpg" alt="轮播图4">
-					     </a>
-					     <div class="carousel-caption">
-					        ...
-					      </div>-->
-					    </div>
-					 
-					   
-					  </div>
-					
-					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					    <span class="sr-only">Previous</span>
-					  
-					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					    <span class="sr-only">Next</span>
-					  </a>
-					</div>
-			</div>
-			<!--=========轮播图结束===========-->
-			
-			<!--form表单开始-->
-			<form method="get" action="www.baidu.com">
-			<div class="bgdiv1"><!--测评背景div1-->
-			<!--=========入户测评开始===========-->
-			<div class="appraisal ">
-				<div class="block" style="position: relative; margin-top:30px;">
-			    <div class="block-title">深圳市2018年入户资格在线测评系统</div>
-			    
-			    <!--总form表单-->
-			    <div class="totalForm">
-			    	
-			    	
-			    	<!--==左边测评开始==-->
-			    	<div class="totalForm_left">
-			    		<div class="jf_input">
-			    	  <!--======姓名开始=======-->	
-					  <div class="title" style="font-size: 20px;">个人姓名：<input class="form-control-input" type="text" id="name" name="name" class="msg_text" maxlength="5"  id="msg_username" placeholder="请输入您的姓名"></div>
-					  <!--<div class="form-control-input">
-			            <input class="form-control-input" type="text" id="name" name="name" class="msg_text" maxlength="5"  id="msg_username" placeholder="请输入您的姓名">
-				      </div>-->
-				      <!--====分隔块start===-->
-				      <div style="height: 20px;"></div>
-				      <!--====分隔块end===-->
-					  <div style="clear: both"></div>
-					   <!--======姓名结束=======-->
-					   <!--======手机开始=======-->
-					    <div class="title" style="font-size: 20px;">接收手机：<input class="form-control-input" type="text"  id="phone" name="phone"  class="msg_text" maxlength="11" placeholder="请输入您的手机"></div>
-					 <!-- <div class="form-control-input">
-			            <input class="form-control-input" type="text"  id="phone" name="phone"  class="msg_text" maxlength="11" placeholder="请输入您的手机">
-				      </div>-->
-				      <!--====分隔块start===-->
-				      <div style="height: 20px;"></div>
-				      <!--====分隔块end===-->
-					  <div style="clear: both"></div>
-					  <!--======手机结束=======-->
-					   <!--======年龄开始=======-->
-					  <div class="title" style="font-size: 20px;">您的年龄：
-			             <select name="age" id="age" class="selectClass">
-			            	<option  value="-1">--请选择--</option>
-			            	<option  value="1">25以下</option>
-			            	<option  value="2">25-30</option>
-			            	<option  value="3">30-35</option>
-			            	<option value="5">35-40</option>
-			            	<option  value="4">40以上</option>
-			            </select></div>
-			            <!--====分隔块start===-->
-				      <div style="height: 20px;"></div>
-				      <!--====分隔块end===-->
-					  <div style="clear: both"></div>
-					  <!--======年龄结束=======-->
-					  <!--======学历开始=======-->
-					  <div class="title" style="font-size: 20px;">当前学历：
-			           <select name="educationLevel" id="educationLevel" class="selectClass">
-			            	<option  value="-1">--请选择--</option>
-			            	<option  value="1">高中、中专及以下</option>
-			            	<option  value="2">非全日制大专</option>
-			            	<option  value="3">全日制大专</option>
-			            	<option  value="4">非全日制本科</option>
-			            	<option  value="5">全日制本科及以上</option>
-		               </select></div>
-		               <!--====分隔块start===-->
-				      <div style="height: 20px;"></div>
-				      <!--====分隔块end===-->
-					  <div style="clear: both"></div>
-					   <!--======学历结束=======-->
-				       <!--======社保开始=======-->
-					  <div class="title" style="font-size: 20px;">社保年限：
-			            <select name="insureYear" id="insureYear"  class="selectClass" >
-			            	<option  value="-1">--请选择--</option>
-			            	<option  value="1">一年以下</option>
-			            	<option  value="2">1-2年</option>
-			            	<option  value="3">3-4年</option>
-			            	<option  value="4">五年以上</option>
-			            </select></div>
-				       <!--======社保结束=======-->
-				       <!--====分隔块start===-->
-				      <div style="height: 20px;"></div>
-				      <!--====分隔块end===-->
-					  <div style="clear: both"></div>
-					  <div class="title" style="font-size: 20px;">婚育状况：
-			            <select  name="msg_other" class="selectClass" >
-						  <option  value="-1">--请选择--</option>
-						  <option value="1">未婚未育</option>
-						  <option value="2">已婚未育</option>
-						  <option value="3">已婚已育</option>
-						  <option value="4">已婚超生</option>
-						  <option value="5">其它</option>
-						</select></div>
-						<!--====分隔块start===-->
-				      <div style="height: 10px;"></div>
-				      <!--====分隔块end===-->
-					  <div style="clear: both"></div>
-					 
-					  <div style="font-size: 14px; height: 30px; line-height:30px; color:#D11D43;">*请认真填写，各选项将直接影响你最后的积分情况。</div>
-					  <!--====分隔块start===-->
-				      <div style="height: 20px;"></div>
-				      <!--====分隔块end===<--></-->
-					  <div class="formBtDiv">
-					  	<input class="formbt" onclick="submitForm()" type="button" value="免费测评" />
-					  </div>
-					</div>
-			    	</div>
-			    	<!--==左边测评结束==-->
-			    	<!--==右边滚动开始==-->
-			    	<div class="totalForm_right">
-			    		<div style="font-size:16px;">最新查询结果</div>
-			   <div style="padding-left:20px; font-size:14px; height:25px; line-height:25px;">目前已有<span style="color:#C00">853471</span>次查询：</div>
-			   <!--新闻滚动-->
-			   <div >
-			    <style type="text/css">
-			ul,li{margin:0;padding:0}
-			#scrollDiv{width:430px;height:300px;min-height:15px;line-height:15px;overflow:hidden; padding-left:10px; margin-top:10px;}
-			#scrollDiv li{list-style-type: none; height:25px;padding-left:10px; font-size:12px;}
-			.news_roll ul li .name{ width: 50px;float: left;}
-			.news_roll ul li .talk{ width: 50px;float: left;}
-			.news_roll ul li .phone{ width: 80px;float: left;}
-			.news_roll ul li .fenshu{ width: 70px;float: left;}
-			.news_roll ul li .zhuangtai{ width: 80px;float: left;}
-			.news_roll ul li .link{ width: 80px;float: left;}
-			</style>
-			<script type="text/javascript">
-			//滚动插件
-			(function($){
-			$.fn.extend({
-			        Scroll:function(opt,callback){
-			                //参数初始化
-			                if(!opt) var opt={};
-			                var _this=this.eq(0).find("ul:first");
-			                var        lineH=_this.find("li:first").height(), //获取行高
-			                        line=opt.line?parseInt(opt.line,20):parseInt(this.height()/lineH,10), //每次滚动的行数，默认为一屏，即父容器高度
-			                        speed=opt.speed?parseInt(opt.speed,10):800, //卷动速度，数值越大，速度越慢（毫秒）
-			                        timer=opt.timer?parseInt(opt.timer,10):8000; //滚动的时间间隔（毫秒）
-			                if(line==0) line=1;
-			                var upHeight=0-line*lineH;
-			                //滚动函数
-			                scrollUp=function(){
-			                        _this.animate({
-			                                marginTop:upHeight
-			                        },speed,function(){
-			                                for(i=1;i<=line;i++){
-			                                        _this.find("li:first").appendTo(_this);
-			                                }
-			                                _this.css({marginTop:0});
-			                        });
-			                }
-			                //鼠标事件绑定
-			                _this.hover(function(){
-			                        clearInterval(timerID);
-			                },function(){
-			                        timerID=setInterval("scrollUp()",timer);
-			                }).mouseout();
-			        }        
-			})
-			})(jQuery);
-			
-			$(document).ready(function(){
-			        $("#scrollDiv").Scroll({line:1,speed:600,timer:1000});
-			});
-			</script>
-			<div id="scrollDiv" class="news_roll">
-			  <ul>
-			    <li><span class="name">刘**</span><span class="talk">查询</span><span class="phone">138***51*</span><span class="fenshu">积分84</span><span class="zhuangtai">不够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[解决方案]</a></li>
-			    <li><span class="name">卫**</span><span class="talk">查询</span><span class="phone">134***45*</span><span class="fenshu">积分109</span><span class="zhuangtai">够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[协助入户]</a></li>
-			    <li><span class="name">张**</span><span class="talk">查询</span><span class="phone">136***64*</span><span class="fenshu">积分97</span><span class="zhuangtai">不够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[解决方案]</a></li>
-			    <li><span class="name">胡**</span><span class="talk">查询</span><span class="phone">188***49*</span><span class="fenshu">积分115</span><span class="zhuangtai">够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[协助入户]</a></li>
-			    <li><span class="name">陈**</span><span class="talk">查询</span><span class="phone">136***88*</span><span class="fenshu">积分76</span><span class="zhuangtai">不够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[解决方案]</a></li>
-			    <li><span class="name">黄**</span><span class="talk">查询</span><span class="phone">183***72*</span><span class="fenshu">积分92</span><span class="zhuangtai">不够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[解决方案]</a></li>
-			    <li><span class="name">洪**</span><span class="talk">查询</span><span class="phone">135***99*</span><span class="fenshu">积分125</span><span class="zhuangtai">够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[协助入户]</a></li>
-			    <li><span class="name">何**</span><span class="talk">查询</span><span class="phone">135***83*</span><span class="fenshu">积分116</span><span class="zhuangtai">够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[协助入户]</a></li>
-			    <li><span class="name">许**</span><span class="talk">查询</span><span class="phone">134***43*</span><span class="fenshu">积分83</span><span class="zhuangtai">不够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[解决方案]</a></li>
-			    <li><span class="name">吴**</span><span class="talk">查询</span><span class="phone">133***81*</span><span class="fenshu">积分94</span><span class="zhuangtai">不够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[解决方案]</a></li>
-			    <li><span class="name">温**</span><span class="talk">查询</span><span class="phone">137***73*</span><span class="fenshu">积分108</span><span class="zhuangtai">够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[协助入户]</a></li>
-			    <li><span class="name">罗**</span><span class="talk">查询</span><span class="phone">131***05*</span><span class="fenshu">积分80</span><span class="zhuangtai">不够分数</span><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="color:#F01662" class="link">[解决方案]</a></li>
-			  </ul>
-			</div>
-			    </div>
-			    	</div>
-			    	<!--==右边滚动结束==-->
-			    </div>
-			      <!--总form表单结束-->
-			    <!--<p style="position: relative;z-index: 1;text-align: center;color: #fff;margin-top: 40px;">您的评测结果将以短信形式通知！（由于通讯原因，或有延迟）请耐心等待。
-			      <br><br></p>-->
-			    <!--<div class="" style="position: absolute;bottom: 0;z-index:0;width: 100%;height: 260px; background:url(img/xiaoqu/nav-bg.jpg) 50% 0/auto auto repeat-y"></div>-->
-			  </div>
-
-			</div><!--//appraisal-->
-			
-			</div><!--//bgdiv1-->
-			<div class="bgdiv2">
-			</div><!--//div2-->
-			</form>
-			<!--form表单结束-->
-			<!--=========入户测评结束===========-->
-			
-			
-			<!--申请条件图片-->
-			<div class="bgImgDiv">
-				<center>
-					 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					<img   src="img/bg/applyCondition.jpg" />	
-					</a>
-				</center>		
-				
-			</div>
-			<!--//申请条件图片-->
-			<!--==绿色通道开始==-->
-			<div class="greenChan">
-				<!--左边文字-->
-				<div class="greenChan_left">
-					<br /><br />
-					<span  id="greenChan_font">
-					<p>预约积分入户绿色通道</p>
-					<p><省事><省时></p> 
-					<p><自考课程均享受8.5折特惠><一次毕业率高达96.7%></p><br />
-					</span>
-					
-					<hr style="width:50%;height:15px;border:none;border-top:1px dashed #555555;" />
-					<span  id="greenChan_font2">
-					<p>全国免费咨询热线</p>
-					<p>0755-32831222</p>
-					</span>
-				</div>
-				
-				<!--右边表单-->
-				<div class="greenChan_right">
-					<form>
-						<br /><br />
-						<span id="yuyue">赶快预约!今日名额仅剩<span style="font-size: 50px;">&nbsp;7&nbsp;</span>名</span><br /><br />
-						<div class="form_title">您的姓名<span >*</span>:
-							<input class="gcform_input" type="text" maxlength="4"  placeholder="请输入您的姓名" /><br /><br />
-						</div>
-						<div class="form_title">您的电话<span >*</span>:
-							<input class="gcform_input" type="text" maxlength="11"  placeholder="请输入您的电话" /><br /><br />
-						</div>
-						<div class="form_title">您的微信<span >*</span>:
-							<input class="gcform_input" type="text" maxlength="20" placeholder="请输入您的微信或QQ" />
-						</div>
-						<br />
-						<input onclick="javascript:window.location.href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='"  class="yuyueBt" type="button" value="立即预约" />
-					</form>
-				</div>
-			</div>
-			<!--==绿色通道结束==-->
-			
-			<!--不成功不收费图片-->
-			<div class="bgImgDiv2">
-				<center>
-					 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					<img   src="img/bg/success.jpg" />	
-					</a>
-				</center>		
-				
-			</div>
-			<!--//不成功不收费图片-->
-			<!--优势图片开始-->
-			<div class="bgImgDiv3">
-				<center>
-					 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					<img   src="img/bg/superiority.jpg" />	
-					</a>
-				</center>		
-				
-			</div>
-			<!--//优势图片结束-->
-			
-			<!--补贴图片开始-->
-			<div class="bgImgDiv4">
-				<center>
-					 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					<img   src="img/bg/butie.jpg" />
-					</a>
-				</center>		
-				
-			</div>
-			<!--//补贴图片结束-->
-			
-			<!--服务图片开始-->
-			<div class="bgImgDiv5">
-				<center>
-					 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					<img   src="img/bg/service.jpg" />
-					</a>
-				</center>		
-				
-			</div>
-			<!--//服务图片结束-->
-			
-			<!--8大优势图片开始-->
-			<div class="bgImgDiv6">
-				<center>
-					 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					<img   src="img/bg/8superiority.png" />	
-					</a>
-				</center>		
-				
-			</div>
-			<!--//8大优势图片结束-->
-			
-			<!--办理流程图片开始-->
-			<div class="bgImgDiv7">
-				<center>
-					 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-					<img   src="img/bg/flow.jpg" />	
-					</a>
-				</center>		
-				
-			</div>
-			<!--//办理流程图片结束-->
-			
-			<!--页脚粉红色div开始-->
-			<div class="bgImgDiv8">
-				
-			</div>
-			<!--//页脚粉红色div结束-->
-			
-			<!--=========学历部分开始==========-->
-			<!--<div class="jf_bugou">
-				积分不够？学历来凑！
-			</div>-->
-			
-			<!-- 头部 END -->
-			<div class="banner">
-					<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >
-						<img src=" img/edu/banner_3.jpg" alt="" class="bg" data-pagespeed-url-hash="3898899936" >
-						<img src=" img/edu/banner_bg3.png" alt="" class="center" data-pagespeed-url-hash="3614563575" >
-					</a>
-			</div>
-			<!--banner end-->
-
-			
-			
-			<!--全民助学让人人都拥有本科-->
-			<div class="con_box01">
-				<div class="center">
-					<ul class="con_box01_bx1 clearfix">
-			
-						<li class="list_1">
-							<div>
-								<img src="img/edu/fla.png" alt="" data-pagespeed-url-hash="1078498077" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-								<h3>自学考试</h3>
-								<h4></h4>
-								<p>部分专业<br>难度低</p>
-							</div>
-							<div class="hide">
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">报名条件</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">报名时间</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">入学考试</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">考试时间</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">报名入口</a>
-							</div>
-						</li>
-			
-						<li class="list_2">
-							<div>
-								<img src=" img/edu/flb.png" alt="" data-pagespeed-url-hash="1372997998" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-								<h3>成人高考</h3>
-								<h4></h4>
-								<p>业余学历<br>有入学考试</p>
-							</div>
-							<div class="hide">
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">报名条件</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">报名时间</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">入学考试</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">考试时间</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">报名入口</a>
-							</div>
-						</li>
-			
-						<li class="list_3">
-							<div>
-								<img src=" img/edu/flc.png" alt="" data-pagespeed-url-hash="1667497919" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-								<h3>远程 函授 电大</h3>
-								<h4></h4>
-								<p>远程学历<br>有入学考试</p>
-							</div>
-							<div class="hide">
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">报名条件</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">报名时间</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">入学考试</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">考试时间</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">报名入口</a>
-							</div>
-						</li>
-			
-						<li class="list_4">
-							<div>
-								<img src=" img/edu/fld.png" alt="" data-pagespeed-url-hash="1961997840" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-								<h3>2018年报考指导书</h3>
-								<p>新世界2018版《成人学历报考指导白皮书》免费发放中，提醒考生切勿错过报考</p>
-							</div>
-							<div class="hide">
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">在线领取</a>
-								<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" onClick=" ">在线咨询</a>
-							</div>
-						</li>
-			
-					</ul>
-			
-				</div>
-			</div>
-			<!--全民助学让人人都拥有本科-->
-
-			
-			<!--============推荐院校一览表=========-->
-			<div class="rec_sch">
-				<center>
-					<img style="width: 40%;height:40%;" src="img/edu/rec_sch.jpg" />
-					
-				</center>
-				<br /><br />
-				<!--滚动院校logo-->
-			  	<div id="list" class="schoolLogo">
-					<table cellspacing="0" cellpadding="0"
-					style="width: 680px; border: 0px;">
-						<tr>
-						<td id="list1">
-						<table style="border: 0px;" cellpadding="0" cellspacing="0">
-						<tr id="pic">
-						<td><img style="border: 0px;" alt="" src="img/schoollogo/1.jpg" /></td>
-						<td><img style="border: 0px;" alt="" src="img/schoollogo/2.jpg" /></td>
-						<td><img style="border: 0px;" alt="" src="img/schoollogo/3.jpg" /></td>
-						<td><img style="border: 0px;" alt="" src="img/schoollogo/4.jpg" /></td>
-						<td><img style="border: 0px;" alt="" src="img/schoollogo/5.jpg" /></td>
-						<td><img style="border: 0px;" alt="" src="img/schoollogo/6.jpg" /></td>
-						<td><img style="border: 0px;" alt="" src="img/schoollogo/7.jpg" /></td>
-						</tr>
-						</table>
-						</td>
-						<td id="list2"></td>
-						</tr>
-					</table>
-				</div>
-				<script type="text/javascript">
-				/*图片滚动效果*/
-				var speedpic = 30;//速度数值越大速度越慢
-				document.getElementById("list2").innerHTML = document.getElementById("list1").innerHTML;
-				function Marqueepic() {
-				if (document.getElementById("list2").offsetWidth
-				- document.getElementById("list").scrollLeft <= 0) {
-				document.getElementById("list").scrollLeft -= document
-				.getElementById("list1").offsetWidth;
-				} else {
-				document.getElementById("list").scrollLeft++;
-				}
-				}
-				var MyMarpic = setInterval(Marqueepic, speedpic);
-				document.getElementById("list").onmouseover = function() {
-				clearInterval(MyMarpic);
-				}
-				document.getElementById("list").onmouseout = function() {
-				MyMarpic = setInterval(Marqueepic, speedpic);
-				}
-				</script>	
-			  
-			  <!--滚动院校logo结束-->
-				
-				<!-- 热门好专业才配的上名校 -->
-				<div class="major_box">
-					<div class="major">
-						<h2>热门<strong>好专业</strong></h2>
-						<p>热门好专业，尽情挑选，无论入哪行，<em>你都是The best of the best!</em></p>
-						<ul class="clearfix">
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >工程质量监督与管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >计算机信息管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >计算机科学与技术</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >机械制造与自动化</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >机电一体化技术</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >电气自动化技术</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >工商企业管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >市场营销</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >电力工程管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >电子信息工程技术</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >宝石商贸与营销</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >资源勘查工程</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >通信技术</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >工程管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >软件技术</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >安全工程</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >土地资源管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >机电一体化技术</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >土木工程</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >经济学</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >工程造价</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >行政管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >物流管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >建筑工程技术</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >人力资源管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >商务管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >金融管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >能源管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >采购管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >电子商务</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >电脑艺术设计</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >财务管理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >教育学</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >会计</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >金融</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >法律</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >护理</a></li>
-							<li><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >药学</a></li>
-							<li><a href="javascript:;" class="more"  >查看更多热门专业</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- 热门好专业才配的上名校 END -->
-
-				
-			</div>
-			<!--============推荐院校一览表=========-->
-			
-			
-			
-			<!--=============三大学历提升方案==============-->
-			<div class="tsfa">
-				<center>
-				<img style="width: 40%;height: 40%;" src="img/edu/tsfa.jpg" />
-				<br /><br />
-					
-				<!--三个提升方案按钮-->
-				<div class="3button">
-					
-					<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-						<button  class="button_1">
-							高中学历<br />升专科
-						</button>		
-					</a>
-					&nbsp;
-					<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-						<button  class="button_2">
-							高中学历<br />升本科
-						</button>	
-					</a>
-					
-					&nbsp;
-					<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-						<button  class="button_3">
-							专科学历<br />升本科
-						</button>	
-					</a>
-					
-				</div>
-				<br /><br />
-				<!--提升方案下方按钮-->
-					<div class="moreInfo">
-						
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_4">
-							点击获取个人学历提升方案>>
-							</button>		
-						</a>
-					</div>
-				<div ></div>
-				</center>
-			</div>
-			<!--============三大学历提升方案结束=============-->
-			
-			<hr style="width:80%;height:1px;border:none;border-top:1px dashed #0066CC;" />
-			
-			<!--===========2018复习计划start=======-->
-			<div class="plan"><!--下半部分-->
-			<!--左边计划start-->
-			<div class="plan_left">
-				<center><h2>2018年自学考试复习计划下载</h2></center>
-				<div class="left_li">
-					<ul><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >2018年考试大纲下载</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							点击下载
-							</button>
-						</a>
-						
-						
-					</li><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >2018年辅导讲义下载</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							点击下载
-							</button>
-						</a>
-					</li><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >自学考试各专业历年真题申请【免费下载】</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							点击下载
-							</button>
-						</a>
-					</li><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >自考全新课件下载</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							点击下载
-							</button>
-						</a>
-					</li><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >自考本科各专业通过率及分数线下载</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							点击下载
-							</button>
-						</a>
-					</li>
-				</ul>
-				</div>
-			</div>
-			<!--左边计划end-->
-			<!--右边计划start-->
-			<div class="plan_left">
-				<center><h2>2018年成人学历教育常见问题</h2></center>
-				<div class="left_li">
-					<ul><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >自学考试，网络教育，成人高考的区别详解</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							了解详情
-							</button>
-						</a>
-						
-						
-					</li><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >今日头条：2018下半年自学考试你不知道的事儿</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							了解详情
-							</button>
-						</a>
-					</li><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >深圳居住证如何积分</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							了解详情
-							</button>
-						</a>
-					</li><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >2018年助学金补贴申请条件</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							了解详情
-							</button>
-						</a>
-					</li><br />
-					<li>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="  >自考满分学员教你如何轻松考到毕业证</a>
-						<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" class="link"  >
-							<button  class="button_5">
-							了解详情
-							</button>
-						</a>
-					</li>
-				</ul>
-				</div>
-			</div>
-			</div>
-			<!--右边计划end-->
-			
-
-			
-			<!--===========2018年复习计划end============-->
-			
-			<!--=========学历部分结束==========-->
-			
-			<!--=========校区开始==========-->
-			<!--校区-->
-			<center>
-				<img style="width: 40%;height: 40%;margin-bottom: 30px;" src="img/xiaoqu/6school.jpg" />
-				
-			</center>
-			
-			<!--<div class="main1" >
-			 <div style="height:100px;margin-bottom: 30px; font-size:40px; color:#0060E5; font-weight:bold; text-align:center; line-height:100px;" class="pic1">积分入户网六大服务中心</div>
-			</div>-->
-			<!--<img src="img/footer/footerbg.jpg" />-->
-			
-			
-			<div class="main">
-			 <div class="pic" style="width:1100px; height: 250px;">
-			   <div class="step09">
-			    <ul>
-			     <li style="margin-left:20px;">
-			      <div class="diqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><img src="img/xiaoqu/diqu01.jpg" width="177"/></a></div>
-			      <div class="text">宝安入户服务中心</div>
-				  <div class="btn_xiaoqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">点击获取校区地址</a></div>
-			     </li>
-			     <li>
-			      <div class="diqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><img src="img/xiaoqu/diqu02.jpg" width="177"/></a></div>
-			      <div class="text">南山入户服务中心</div>
-				  <div class="btn_xiaoqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">点击获取校区地址</a></div>
-			     </li>
-			     <li>
-			      <div class="diqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><img src="img/xiaoqu/diqu03.jpg" width="177"/></a></div>
-			      <div class="text">福田入户服务中心</div>
-				  <div class="btn_xiaoqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">点击获取校区地址</a></div>
-			     </li>
-			     <li>
-			      <div class="diqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><img src="img/xiaoqu/diqu04.jpg" width="177"/></a></div>
-			      <div class="text">龙华入户服务中心</div>
-				  <div class="btn_xiaoqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">点击获取校区地址</a></div>
-			     </li>
-			     <li>
-			      <div class="diqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><img src="img/xiaoqu/diqu05.jpg" width="177"/></a></div>
-			      <div class="text">罗湖入户服务中心</div>
-				  <div class="btn_xiaoqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">点击获取校区地址</a></div>
-			     </li>
-			     <li style="margin-left:150px; display:none;">
-			      <div class="diqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><img src="img/xiaoqu/diqu06.jpg" width="177"/></a></div>
-			      <div class="text">盐田区</div>
-			     </li>
-			     <li>
-			      <div class="diqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><img src="img/xiaoqu/diqu07.jpg" width="177"/></a></div>
-			      <div class="text">龙岗区</div>
-				  <div class="btn_xiaoqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">点击获取校区地址</a></div>
-			     </li>
-			     <li style="display:none;">
-			      <div class="diqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><img src="img/xiaoqu/diqu08.jpg" width="177"/></a></div>
-			      <div class="text">光明区</div>
-			     </li>
-			     <li style="display:none;">
-			      <div class="diqu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><img src="img/xiaoqu/diqu09.jpg" width="177"/></a></div>
-			      <div class="text">大鹏区</div>
-			     </li>
-			     <div class="clear"></div>
-			    </ul>
-			   </div>
-			 </div>
-			</div>
-			<div style="clear:both"></div>
-			<div class="main" style="border-top:1px #CCCCCC solid; padding-top:10px;">
-			 <div class="minwidth kfwNav headerOverflowInherit" style="z-index:100;">
-			      <div class="floatLeft kfwNaSub headerOverflowInherit">
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank" style="text-align:center;text-indent:0; font-size:18px; font-weight:bold;">深圳积分入户网</a>
-			        <div class="kfwNaSubSub kfwNaSubSubIsHome" style="display:none;">
-			          <div class="floatLeft headerOverflowInherit kfwISubNav">
-			             <ul class="iNav overflowhidden headerOverflowInherit">
-			               <li class="iNavFirst">
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe63f;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户政策</a></h4>
-			                </li>
-			               <li >
-			                <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe64f;</i></a></span>
-			                <i></i>
-			                <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户条件</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe60e;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户测评</a></h4>
-			                </li>
-			               <li >
-			                <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe611;</i></a></span>
-			                <i></i>
-			                <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户分值表</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe633;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分入户流程</a></h4>
-			                    
-			                </li>
-			               <li >
-			                <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe60b;</i></a></span>
-			                <i></i>
-			                <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">居住证查询</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe62f;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">学信网学历查询</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe601;</i></a></span>
-			                    <i></i>
-			                    <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">入户工种查询</a></h4>
-			                </li>
-			               <li >
-			                    <span class="li_menu"><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank"><i class="iconfont">&#xe621;</i></a></span>
-			                    <i></i>
-			                 <h4><a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">征信查询</a></h4>
-			               </li>		
-			             </ul>
-			          </div>
-			        </div>
-			      </div>
-			      <div class="floatLeft kfwNavs">
-			        <!--<a href="/">首页</a>-->
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">积分制入户
-			        <img class="hotNew" alt="" src="img/hot.gif">
-			        </a>
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">应届生入户
-			        <img class="hotNew" alt="" src="img/hot.gif">
-			        </a>
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">留学生入户</a>
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">核准制入户</a>
-			        <a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">人才引进入户</a>
-					<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">家属随迁入户</a>
-					<a  href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="   target="_blank">补贴申请事宜</a>
-			        <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" target="_blank">关于我们</a>
-			        </div>
-			    </div>
-			</div>
-			<div style="clear:both"></div>
-			<!--校区-->
-
-			<!--=========校区结束==========-->
-			
-			<!--===========页脚开始============-->
-		<div class="footerbf">
-			<a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw="> <img src="img/footer/footerbg2.jpg" /></a>
-		</div>
-			
-		<center>
-		<div class="footer">
-			<br />
-			<div class="footer_img">
-				 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-				<img  src="img/footer/foot_ico1.png" />&nbsp;&nbsp;
-				</a>
-				 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-				<img href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" src="img/footer/foot_ico2.png" />&nbsp;&nbsp;
-				</a>
-				 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-				<img src="img/footer/foot_ico3.png" />&nbsp;&nbsp;
-				</a>
-				 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-				<img src="img/footer/foot_ico4.png" />&nbsp;&nbsp;
-				</a>
-				 <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">
-				<img src="img/footer/foot_ico5.png" />
-				</a>
-			</div>
-			<br />
-			<div class="footer_link">
-			<a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=">关于我们</a>
-			 ┊ 
-			<a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" target="_blank">联系我们</a>
-			  ┊ 
-			  <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" target="_blank">诚聘英才</a>
-			   ┊ 
-			   <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" target="_blank">合作伙伴</a>
-			    ┊ 
-			   <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" target="_blank">法律声明</a>
-			    ┊ 
-			   <a href="http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw=" target="_blank">建议与投诉</a>
-			</div>
-			<br />
-			<div class="footer_cr">
-				总部地址：深圳市宝安区固戍地址站A出口新中泰商务大厦7a
-				<br />
-				Copyright © 2001 - 2018 深圳市捷通咨询有限公司版权所有 <a style="color: #555;" href="http://www.miitbeian.gov.cn">粤ICP备17111325号-2</a>
-			</div>
-		</div>
-		</center>
-		
-			<!--===========页脚结束=============-->
-			
-			
-			<!--==============百度商桥开始============-->
-			<script type="text/javascript"> 
-				var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1e20cecd187e63d5a4a492a982b7f4cb' type='text/javascript'%3E%3C/script%3E")) 
-			</script>
-			
-			<!--===============百度商桥结束========-->
-			
-		<!--</div>-->
-	</body>
 	
+
+<script>
+    $('.hiSlider3').hiSlider({
+        isFlexible: true,
+        isSupportTouch: true,
+         isShowTitle: false,
+         isShowControls: false,
+        titleAttr: function(curIdx){
+            return $('img', this).attr('alt');
+        }
+    });
+</script>
+<script>
+	function ysdt(){
+		$(".im-c .ic-b .ic-tit img").animate({
+			height:'0.7rem',
+			width:'0.7rem',
+			top:'-0.05rem',
+			left:'-0.05rem',
+		},500);
+		$(".im-c .ic-b .ic-tit img").animate({
+			height:'0.6rem',
+			width:'0.6rem',
+			top:'0',
+			left:'0',
+		},500);
+	}
 	
+	$(function(){
+		setInterval("ysdt()",1000);
+	})
+</script>
+<!--无缝滚动-->
+<script src="js/jquery.liMarquee.js"></script>
+<script>
+$(function(){
+	$('.dowebok').liMarquee({
+		direction: 'up'
+	});
+});
+</script>
+<script src="/copyright/ssmd_copyright01.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/20002981/10094496.js"></script>
+<div style="display:none">
+  <!--积分全局统计-->
+  <script src="https://s4.cnzz.com/z_stat.php?id=1259668762&web_id=1259668762" language="JavaScript"></script>
+  <!--积分全局统计-->
+  <script src="https://s11.cnzz.com/z_stat.php?id=1259893576&web_id=1259893576" language="JavaScript"></script>
+</div> 
+
+<!--统计代码-->
+<!--<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2b2a35f3947ddd063aae54df60809a4b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>-->
+<div style="height:27px"></div>
+
+<!--========百度商桥开始======-->
+<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F79c328735d61a353b766ae5abd2b9d96' type='text/javascript'%3E%3C/script%3E")) </script>
+<!--========百度商桥结束===========-->
+
+</body>
 </html>
