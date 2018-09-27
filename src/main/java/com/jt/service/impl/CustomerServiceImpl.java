@@ -80,7 +80,7 @@ public class CustomerServiceImpl implements CustomerService {
 			Member member = memberDao.selectByPrimaryKey(customer.getMemberId());
 			apply.setMemberName(member.getName());
 			apply.setRootMemberId(member.getRootMemberId());
-			apply.setRootMemberName(member.getRootMemberName());
+			apply.setRootMemberName(member.getRootMemberName()); 
 		}
 		
 		apply.setState(0);
