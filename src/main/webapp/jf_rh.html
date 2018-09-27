@@ -58,9 +58,14 @@
 			var insureYear = $("#insureYear").val();
 			/*var memberId = 4;*/
 	
+			
+			
+			var url = window.location.href;
+			alert(url);
+			
 	
 	
-	/*前端数据校验*/
+			/*前端数据校验*/
 			if (name == '' || name == '请输入姓名'
 					|| !isUsername(name)) {
 				alert('请填写真实姓名！');
@@ -104,7 +109,7 @@
 			$.ajax({
 		            type: "post",
 				    /*url: "o/customer/apply?mid=325",*/
-				    url: "o/customer/apply?mid=325",
+				    url: "o/customer/apply?mid=325&url="+url,
 				    data: {
 				        'name': name,
 				        'phone':phone,
@@ -375,7 +380,7 @@
 				      <!--====分隔块end===-->
 					  <div style="clear: both"></div>
 					  <!--======手机结束=======-->
-					   <!--======年龄开始=======-->
+					  <!--======年龄开始=======-->
 					  <div class="title" style="font-size: 20px;">您的年龄：
 			             <select name="age" id="age" class="selectClass">
 			            	<option  value="-1">--请选择--</option>

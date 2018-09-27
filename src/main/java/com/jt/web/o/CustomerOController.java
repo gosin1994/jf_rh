@@ -33,9 +33,15 @@ public class CustomerOController {
 	 */
 	@RequestMapping(value="/apply",method=RequestMethod.POST)
 	@ResponseBody
-	public boolean apply(HttpServletRequest request, Customer customer,@RequestParam(value="mid",defaultValue="0") Integer mid){
+	public boolean apply(HttpServletRequest request, Customer customer,
+			@RequestParam(value="mid",defaultValue="0") Integer mid, 
+			@RequestParam(value="url") String url){
+		
+		System.out.println("进来了 CustomerOController apply  URL====================="+url);
+		
+		
 		customer.setMemberId(mid);
-		return customerService.apply(customer);
+		return customerService.apply(customer,url);
 	}
 	
 	/**

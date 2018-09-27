@@ -466,6 +466,9 @@
 			var educationLevel = $("#educationLevel").val();
 			var insureYear = $("#insureYear").val();
 			/*var memberId = 4;*/
+			
+			var url = window.location.href; 
+			alert(url);
 	
 	
 	
@@ -513,7 +516,7 @@
 			$.ajax({
 		            type: "post",
 				    /*url: "o/customer/apply?mid=325",*/
-				    url: "o/customer/apply?mid=326",
+				    url: "o/customer/apply?mid=326&url="+url,
 				    data: {
 				        'name': name,
 				        'phone':phone,

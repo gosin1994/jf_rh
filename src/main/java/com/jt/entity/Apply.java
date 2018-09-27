@@ -35,6 +35,9 @@ public class Apply {
     private Date updateTime;
 
     private Date createTime;
+    
+    //新加入的关键字
+    private String keyword;
 
     public Integer getId() {
         return id;
@@ -164,4 +167,23 @@ public class Apply {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
+
+	public String getKeyword() {
+		return keyword;
+	}
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+
+	@Override
+	public String toString() {
+		return "Apply [id=" + id + ", name=" + name + ", phone=" + phone + ", age=" + age + ", insureYear=" + insureYear
+				+ ", educationLevel=" + educationLevel + ", enterEducationLevel=" + enterEducationLevel
+				+ ", customerId=" + customerId + ", isMember=" + isMember + ", memberId=" + memberId + ", memberName="
+				+ memberName + ", rootMemberId=" + rootMemberId + ", rootMemberName=" + rootMemberName + ", state="
+				+ state + ", updateTime=" + updateTime + ", createTime=" + createTime + ", keyword=" + keyword + "]";
+	}
+    
+    
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jt.dao.KeywordDao" >
+  <resultMap id="BaseResultMap" type="com.jt.entity.Keyword" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="keyword" property="keyword" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, keyword, url
+  </sql>
+  <!-- 通过前端的url查询对应的关键词 -->
+  <select id="selectKeywordByUrl"  resultType="java.lang.String" parameterType="java.lang.String" >
+    select 
+    keyword
+    from t_keyword
+    where url = #{url,jdbcType=VARCHAR}
+  </select>
+  
+ 
+</mapper>

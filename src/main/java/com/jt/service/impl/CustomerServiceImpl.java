@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.jt.dao.ApplyDao;
 import com.jt.dao.CustomerDao;
+import com.jt.dao.KeywordDao;
 import com.jt.dao.MemberDao;
 import com.jt.entity.Apply;
 import com.jt.entity.Customer;
@@ -26,6 +27,8 @@ public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	private ApplyDao applyDao;
 	
+	@Autowired
+	private KeywordDao keywordDao;
 	
 
 	public Customer selectByPrimaryKey(Integer id) {
@@ -33,8 +36,8 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 	
 	
-	public boolean apply(Customer customer) {
-
+	public boolean apply(Customer customer,String url) {
+		
 
 		customer.setCreateTime(new Date());
 		customer.setUpdateTime(customer.getCreateTime());
@@ -49,6 +52,14 @@ public class CustomerServiceImpl implements CustomerService {
 		customerDao.insert(customer);
 		
 		
+		//根据url查询关键词
+		String findKeyword = keywordDao.selectKeywordByUrl(url);
+		if (findKeyword == null) {
+			findKeyword = "无关键词";
+		} 
+		
+		System.out.println("进入了 CustomerServiceImpl apply 中 keyword======"+findKeyword);
+		
 		Apply apply = new Apply();
 		
 		
@@ -60,6 +71,9 @@ public class CustomerServiceImpl implements CustomerService {
 		apply.setCustomerId(customer.getId());
 		apply.setIsMember(customer.getIsMember());
 		apply.setMemberId(customer.getMemberId());
+		
+		//把查询到的keyword保存到apply中
+		apply.setKeyword(findKeyword);
 		
 		if(customer.getMemberId()!=0){
 			
