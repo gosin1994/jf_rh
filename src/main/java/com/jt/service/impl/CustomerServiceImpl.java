@@ -55,10 +55,10 @@ public class CustomerServiceImpl implements CustomerService {
 		//根据url查询关键词
 		String findKeyword = keywordDao.selectKeywordByUrl(url);
 		if (findKeyword == null) {
-			findKeyword = "无关键词";
+			findKeyword = "无";
 		} 
 		
-		System.out.println("进入了 CustomerServiceImpl apply 中 keyword======"+findKeyword);
+		//System.out.println("进入了 CustomerServiceImpl apply 中 keyword======"+findKeyword);
 		
 		Apply apply = new Apply();
 		
