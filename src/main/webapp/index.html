@@ -1,4 +1,8 @@
-
+<!--
+  官网手机端页面
+  2018-9-29
+  龚鑫 gx1008666@163.com
+ -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,9 +26,13 @@
             return false;
     }
     
-  //地址自己修改成你的手机端地址
+    //获取跳转前的地址，再截取参数，然后加到电脑端url后面，就可以判断电脑端的url来源是哪一个关键词
+    var url = window.location.href; 
+    subUrl = url.substring(25);//  jf_h?szjfrh/?cgl/?00363
+    //alert("第一次url===="+subUrl);
+  //地址自己修改成你的电脑端地址
     if (isMobile() == false){
-    	  window.location.href = "jf_rh.html";
+    	  window.location.href = "jf_rh.html?"+subUrl;//http://www.0755sz.com.cn/jf_rh.html?jf_h?szjfrh/?cgl/?00363
     }
       
     </script>
@@ -335,7 +343,7 @@
  </div>
  <div class="foot" id="contact">
   <div style="padding: 10px 0px; background:#DA251C;"><a style="size: 0.4rem;color: white;" href="tel:0755-32831222">联系电话：0755-32831222</a></div>
-  <p style="color: #555;">版权所有：<font class="ssmd_copyright" >CopyRight©2018  <a style="color: #555;" href="http://www.miitbeian.gov.cn">粤ICP备17111325号-2</a></font></p>
+  <p style="color: #555;">版权所有：<font class="ssmd_copyright" >深圳市捷通信息咨询有限公司  <a style="color: #555;" href="http://www.miitbeian.gov.cn">粤ICP备17111325号-2</a></font></p>
   <p style="color: #555;">深圳总部：深圳市宝安区固戍地址站A出口新中泰商务大厦7a</p>
   <div class="copy_nav"><a href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank" style="color:#555; height:30px;">关于我们</a> ┊ <a href='http://p.qiao.baidu.com/im/index?siteid=3913178&ucid=6872389&cp=&cr=&cw='" target="_blank" style="color:#555; height:30px;">联系我们</a></div>
   <div class="blank" style="height: 8%;background-color: #AAAAAA;"></div>
